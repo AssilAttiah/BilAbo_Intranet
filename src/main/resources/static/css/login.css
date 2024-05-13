@@ -1,14 +1,52 @@
-body{
-    background-color: blue;
+body {
+    background: #f3f3f3;
 }
 
-.container1{
-    position: absolute;
-    left: 50%;
-    bottom: 50%;
-    width: 20vh;
+.main-container {
+    margin-left: 40vw;
+    margin-top: 30vh;
 }
 
-#login-type{
-
+.sub-container {
+    margin-left: 6vw;
 }
+
+.custom-select select {
+    background-color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    appearance: none;
+    cursor: pointer;
+}
+
+.custom-select select:focus {
+    outline: none;
+}
+
+.login-brugernavn {
+    margin-top: 1vh;
+}
+
+.login-password {
+    margin-top: 1.5vh;
+    margin-left: -0.8vw;
+}
+
+.login-button {
+    position: fixed;
+    margin-top: 2vh;
+    margin-left: 7vw;
+    background-color: #007bff;
+    color: white;
+    padding: 1% 1%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: #0056b3;
+}
+
