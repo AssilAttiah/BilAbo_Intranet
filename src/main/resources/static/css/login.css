@@ -40,6 +40,8 @@ h3{
 
 .login-knap:hover{
     background-color: #007bff;
+    color: white;
+    box-shadow: 1.5vh 1.5vh 3vh black;
 }
 
 .login-knap, #login-type{
