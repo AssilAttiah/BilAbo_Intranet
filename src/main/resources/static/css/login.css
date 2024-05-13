@@ -1,52 +1,41 @@
-body {
-    background: #f3f3f3;
+body{
+    background-color: #1892C3;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    height: 100vh;
+    overflow: hidden;
 }
 
-.main-container {
-    margin-left: 40vw;
-    margin-top: 30vh;
+.container1{
+    padding: 0;
+    margin: 0;
+    background-color: #f2f2f2;
+    display: grid;
+    justify-items: center;
+    width: 20%;
+    height: 65vh;
+    box-shadow: 1vh 1vh black;
 }
 
-.sub-container {
-    margin-left: 6vw;
+.login-container, .brugernavn-indtast, .adgangskode-indtast{
+    display: grid;
+    justify-items: center;
+    margin-top: 10%;
+    grid-row-gap: 40%;
+    height: 12%;
+    width: 100%;
 }
 
-.custom-select select {
+.login-knap{
+    margin-top: 5vh;
+    width: 50%;
+    height: 60%;
     background-color: white;
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    appearance: none;
-    cursor: pointer;
+    border-width: .1vh;
 }
 
-.custom-select select:focus {
-    outline: none;
-}
-
-.login-brugernavn {
-    margin-top: 1vh;
-}
-
-.login-password {
-    margin-top: 1.5vh;
-    margin-left: -0.8vw;
-}
-
-.login-button {
-    position: fixed;
-    margin-top: 2vh;
-    margin-left: 7vw;
+.login-knap:hover{
     background-color: #007bff;
-    color: white;
-    padding: 1% 1%;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.login-button:hover {
-    background-color: #0056b3;
 }
 

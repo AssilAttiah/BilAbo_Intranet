@@ -7,26 +7,24 @@
     <title>Login BilAbo Intranet</title>
 </head>
 <body>
-<div class="main-container">
-    <div class="sub-container">
-        <label for="login-type">Vælg en logintype</label>
-        <div class="custom-select">
+    <div class="container1">
+        <div class="login-container">
+            <label for="login-type" id="login-type-tekst">Vælg en logintype</label>
             <select id="login-type">
-                <option value="Admin">Admin</option>
                 <option value="Medarbejder">Medarbejder</option>
+                <option value="Admin">Admin</option>
                 <option value="FDM">FDM</option>
             </select>
+            <div class="brugernavn-indtast">
+                <label for="brugernavn">Brugernavn</label>
+                <input type="text" id="brugernavn" name="brugernavn">
+            </div>
+            <div class="adgangskode-indtast">
+                <label for="adgangskode">Adgangskode</label>
+                <input type="password" id="adgangskode" name="adgangskode">
+            </div>
+            <button class="login-knap">Login</button>
         </div>
     </div>
-    <div class="login-brugernavn">
-        <label for="username">Brugernavn</label>
-        <input type="text" id="username" name="username">
-    </div>
-    <div class="login-password">
-        <label for="password">Adgangskode</label>
-        <input type="password" id="password" name="password">
-    </div>
-    <button class="login-button">Login</button>
-</div>
 </body>
 </html>
