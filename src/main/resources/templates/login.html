@@ -8,12 +8,23 @@
 </head>
 <body>
     <div class="container1">
-        <label for="login-type">Vælg en logintype</label>
-        <select id="login-type" size="3">
-            <option value="Admin">Admin</option>
-            <option value="Medarbejder">Medarbejder</option>
-            <option value="FDM">FDM</option>
-        </select>
+        <div class="login-container">
+            <label for="login-type" id="login-type-tekst">Vælg en logintype</label>
+            <select id="login-type">
+                <option value="Medarbejder">Medarbejder</option>
+                <option value="Admin">Admin</option>
+                <option value="FDM">FDM</option>
+            </select>
+            <div class="brugernavn-indtast">
+                <label for="brugernavn">Brugernavn</label>
+                <input type="text" id="brugernavn" name="brugernavn">
+            </div>
+            <div class="adgangskode-indtast">
+                <label for="adgangskode">Adgangskode</label>
+                <input type="password" id="adgangskode" name="adgangskode">
+            </div>
+            <button class="login-knap">Login</button>
+        </div>
     </div>
 </body>
 </html>
