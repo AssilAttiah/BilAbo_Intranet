@@ -1,0 +1,24 @@
+.Dataregistrering,
+.Kundeoplysninger,
+.Bilen+aftale {
+    width: 45%; /* Bredden af hver sektion */
+    float: left; /* Flyt sektionerne til venstre */
+    padding: 20px; /* Tilføj polstring for at give plads omkring indholdet */
+}
+
+.Bilen+aftale {
+    float: right; /* Flyt denne sektion til højre */
+
+}
+
+/* Style for overskrifter */
+h1, h2, h3 {
+    color: #333; /* Farve på overskrifter */
+    font-family: Arial, sans-serif; /* Skrifttype */
+    margin: 0; /* Fjern overskriftens margin */
+}
+
+/* Tilføj plads mellem sektioner */
+br {
+    clear: both; /* Fjern float fra begge sider */
+}
