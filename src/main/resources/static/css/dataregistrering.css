@@ -1,0 +1,47 @@
+/* Dataregistrering.css */
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container styles */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Dataregistrering styles */
+.Dataregistrering {
+    margin-top: 50px; /* Juster topmargin efter behov */
+    text-align: center;
+}
+
+
+.Kundeoplysninger {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 50px;
+    left: 20%;
+
+}
+
+
+.Bilen {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 50px;
+    left: 65%;
+
+}
+
+/* Leasingaftale styles */
+.Leasingaftale {
+    margin-top: 20px; /* Juster topmargin efter behov */
+}
