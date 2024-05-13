@@ -1,0 +1,14 @@
+body{
+    background-color: blue;
+}
+
+.container1{
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    width: 20vh;
+}
+
+#login-type{
+
+}
