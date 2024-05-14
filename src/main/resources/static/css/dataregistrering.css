@@ -1,6 +1,7 @@
 .dataregistrering {
     margin-top: 7vh;
     text-align: center;
+    color: #007bff;
 }
 
 .kundeoplysninger {
@@ -86,4 +87,8 @@
     align-items: flex-start;
     margin-top: 335px;
     left: 75%;
+}
+
+h3, h2{
+    color: #007bff;
 }
