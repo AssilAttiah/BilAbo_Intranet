@@ -8,7 +8,13 @@
 <header>
 
     <a class="bilabo">BILABO</a>
-    <button class="tilbage">Tilbage</button>
+    <button class="tilbage" onclick="redirectToLogin()">Tilbage</button>
+    <script>
+        function redirectToLogin() {
+            window.location.href = "login.html";
+        } // Den linje kode, window.location.href = "login.html";, anvendes i JavaScript til at ændre det aktuelle browservindues URL til en anden URL,
+        // i dette tilfælde "login.html".
+    </script>
 </header>
 <body>
 <aside class="menu">
