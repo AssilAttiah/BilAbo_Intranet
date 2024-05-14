@@ -59,12 +59,12 @@ background-color:rgba(24,27,177,0.47) ;
 }
 .menu{
     background-color: lightgray;
-    width: 250px; /* Juster bredden efter behov */
+    width: 32.1vh; /* Juster bredden efter behov */
     padding: 20px;
     position: fixed;
     top: 15vh;
     left: 1vh;
-    height: 60%;
+    height: 50vh;
     border: 2px solid;
     margin: 0;
 }
@@ -76,4 +76,26 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+.pengebil {
+    width: 60vh;
+    position: absolute;
+    top: 11vh;
+    left: 67vh;
+    border: solid black;
+}
+
+.pengebil th, .pengebil td {
+    border: 1px solid black;
+}
+
+.pengebil th {
+    background-color: whitesmoke;
+}
+.samlet {
+    position: absolute;
+    left: 160vh;
+    top: 43vh;
+    border: solid black 1px;
 }
