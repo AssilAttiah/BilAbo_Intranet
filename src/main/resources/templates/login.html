@@ -17,13 +17,18 @@
             </select>
             <div class="brugernavn-indtast">
                 <h3><label for="brugernavn">Brugernavn</label></h3>
-                <input type="text" id="brugernavn" name="brugernavn">
+                <input type="text" id="brugernavn" name="brugernavn" required>
             </div>
             <div class="adgangskode-indtast">
                 <h3><label for="adgangskode">Adgangskode</label></h3>
-                <input type="password" id="adgangskode" name="adgangskode">
+                <input type="password" id="adgangskode" name="adgangskode" required>
             </div>
-            <button class="login-knap">Login</button>
+            <button class="login-knap" onclick="redirectForside()">Login</button>
+            <script>
+            function redirectForside() {
+            window.location.href = "dataregistrering.html";
+            }
+            </script>
         </div>
     </div>
 </body>
