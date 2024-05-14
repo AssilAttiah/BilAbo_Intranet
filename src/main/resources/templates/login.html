@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" th:href="@{/css/login.css}" href="../static/css/login.css">
-    <title>Login BilAbo Intranet</title>
+    <title>Login</title>
 </head>
 <body>
     <div class="container1">
         <div class="login-container">
-            <label for="login-type" id="login-type-tekst">Vælg en logintype</label>
+            <h3><label for="login-type" id="login-type-tekst">Vælg en logintype</label></h3>
             <select id="login-type">
                 <option value="Medarbejder">Medarbejder</option>
                 <option value="Admin">Admin</option>
                 <option value="FDM">FDM</option>
             </select>
             <div class="brugernavn-indtast">
-                <label for="brugernavn">Brugernavn</label>
+                <h3><label for="brugernavn">Brugernavn</label></h3>
                 <input type="text" id="brugernavn" name="brugernavn">
             </div>
             <div class="adgangskode-indtast">
-                <label for="adgangskode">Adgangskode</label>
+                <h3><label for="adgangskode">Adgangskode</label></h3>
                 <input type="password" id="adgangskode" name="adgangskode">
             </div>
             <button class="login-knap">Login</button>
