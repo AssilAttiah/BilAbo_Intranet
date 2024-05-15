@@ -26,28 +26,25 @@
 <table class="pengebil">
     <thead>
     <tr>
-        <th>Bil</th>
-        <th>Ankomsttidspunkt</th>
-        <th>Indtjente penge</th>
+        <th>Stelnummer</th>
+        <th>Mærke</th>
+        <th>Model</th>
+        <th>Status</th>
+        <th>Leasing ID</th>
     </tr>
     </thead>
     <tbody>
-    <!-- Her kan du tilføje hver bil som en <tr> (table row) -->
-    <tr>
-        <td>Bil 1</td>
-        <td>14. maj 2024, 09:00</td>
-        <td>5000 kr</td>
+    <tr th:each="bil : ${leasedBiler}">
+        <td th:text="${bil.stelnummer}"></td>
+        <td th:text="${bil.mærke}"></td>
+        <td th:text="${bil.model}"></td>
+        <td th:text="${bil.status}"></td>
+        <td th:text="${bil.leasing.id}"></td>
     </tr>
-    <tr>
-        <td>Bil 2</td>
-        <td>15. maj 2024, 10:30</td>
-        <td>7000 kr</td>
-    </tr>
-    <!-- Du kan tilføje flere rækker efter behov -->
     </tbody>
 </table>
 
-<p class="samlet">Samlet beløb: 12000kr</p>
+<p class="samlet" th:text="'Samlet antal biler: ' + ${leasedCars.size()}"></p>
 
 </body>
 </html>
