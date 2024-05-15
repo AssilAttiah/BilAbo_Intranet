@@ -1,35 +1,4 @@
-.dataregistrering {
-    margin-top: 7vh;
-    text-align: center;
-}
-
-.kundeoplysninger {
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 7vh;
-    left: 25%;
-}
-
-.bilen {
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 7vh;
-    left: 50%;
-}
-
-.aftale {
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 7vh;
-    left: 75%;
-}
-.forretning, .report,.data{
+.forretning, .rapport,.data{
     text-decoration: none;
     color: black;
     left: 0;
@@ -69,7 +38,7 @@
 }
 .menu{
     background-color: lightgray;
-    width: 32vh;
+    width: 250px;
     padding: 20px;
     position: fixed;
     top: 15vh;
@@ -77,13 +46,4 @@
     height: 60%;
     border: 2px solid;
     margin: 0;
-}
-
-.gem {
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 335px;
-    left: 75%;
 }
