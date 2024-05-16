@@ -1,5 +1,5 @@
 .dataregistrering {
-    margin-top: 7vh;
+    margin-top: 5vh;
     text-align: center;
 }
 
@@ -17,7 +17,7 @@
     position: absolute;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 7vh;
+    margin-top: 7.5vh;
     left: 50%;
 }
 
@@ -26,15 +26,14 @@
     position: absolute;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 7vh;
+    margin-top: 7.5vh;
     left: 75%;
 }
-.forretning, .report,.data{
+.forretning, .rapport,.data{
     text-decoration: none;
     color: black;
     left: 0;
     position: absolute;
-
 
 }
 .data{
@@ -84,6 +83,10 @@
     position: absolute;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 335px;
-    left: 75%;
+    margin-top: 55vh;
+    left: 80%;
+}
+
+#måned-valg{
+    width: 30vh;
 }
