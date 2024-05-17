@@ -11,7 +11,6 @@
     font-size: 5vh;
     padding-left: 3vh;
     padding-right: 1.8vh;
-    background-color: rgba(24,27,177,0.47);
 }
 .data:hover{
     transform: scale(1.01);
