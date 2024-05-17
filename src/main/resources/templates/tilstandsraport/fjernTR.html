@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link rel="stylesheet" href="../../static/css/raport.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Forretning</title>
+</head>
+<header>
+
+    <a class="bilabo">BILABO</a>
+    <button class="tilbage" onclick="redirectToLogin()">Tilbage</button>
+    <script>
+        function redirectToLogin() {
+            window.location.href = "login.html";
+        } // Den linje kode, window.location.href = "login.html";, anvendes i JavaScript til at ændre det aktuelle browservindues URL til en anden URL,
+        // i dette tilfælde "login.html".
+    </script>
+</header>
+<body>
+<aside class="menu">
+    <h2>Emner</h2>
+    <a href="dataregistrering.html" class="data">Dataregistrering</a>
+    <a href="forretning.html" class="forretning">Forretning</a>
+    <a href="report.html" class="report">Report</a>
+</aside>
+<main class="fjernViaStelNR">
+    <h3>Skriv stelnummer på bil her der ønsket fjernet</h3>
+    <form id="removeCarForm">
+        <label for="vin">Stelnummer:</label>
+        <input type="text" id="vin" name="vin" required>
+        <button type="button" onclick="confirmVin()">Bekræft</button>
+    </form>
+</main>
+
+<script>
+    function confirmVin() {
+        const vin = document.getElementById('vin').value;
+        if (vin) {
+            // Her kan du tilføje logik til at håndtere stelnummeret, fx sende det til serveren
+            alert('Stelnummer ' + vin + ' er blevet bekræftet.');
+        } else {
+            alert('Indtast venligst et stelnummer.');
+        }
+    }
+</script>
+</body>
+</html>
