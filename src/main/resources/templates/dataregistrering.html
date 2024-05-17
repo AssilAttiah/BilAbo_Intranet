@@ -4,13 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dataregistrering</title>
+    <link rel="stylesheet" href="..\static\css\header.css">
     <link rel="stylesheet" href="..\static\css\dataregistrering.css">
     <link rel="stylesheet" href="..\static\css\menu.css">
 </head>
 <body>
-    <div class="dataregistrering">
-        <h1> Dataregistrering</h1>
-    </div>
+    <header>
+        <div class="header-container">
+            <div class="overskrift">
+                <h1>Dataregistrering</h1>
+            </div>
+            <button class="tilbage-knap" onclick="tilbage()">Tilbage</button>
+            <script>
+                function tilbage(){  //DETTE ER TAGET FRA CHATGPT
+                    history.back();
+                }
+            </script>
+            <a href="dataregistrering.html">
+                <img class="logo" src="/static/images/BilAboLogo.png" th:src="@{/static/images/BilAboLogo.png}" alt="Logo">
+            </a>
+        </div>
+    </header>
 
     <aside class="menu">
         <h2>Emner</h2>
