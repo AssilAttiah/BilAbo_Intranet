@@ -6,7 +6,6 @@ body{
 }
 
 .intjeningKvartal {
-    margin-left: 20vw;
     margin-top: 7vh;
     font-size: 18px;
     text-align: left;
@@ -17,30 +16,31 @@ body{
 }
 
 .overordnet {
-    position: absolute;
-    display: grid;
-    grid-column-gap: -2vw;
+
+    display: block;
     width: 30vw;
-    left: 30vh;
+margin:0 auto;
 }
 
 table {
-    display: grid;
+    display: table;
     border-collapse: collapse;
-    width: 70%;
+    width: 100%;
+    box-shadow: 8px 8px 10px black;
 }
 
 .intjeningÅr {
-    margin-left: 20vw;
+
     margin-top: 7vh;
     font-size: 18px;
     text-align: left;
+    padding-bottom: 10vh;
 }
 
 
 table th, table td {
     padding: 2vh 2vw;
-    border: 1px solid #ddd;
+    border: 1px solid black;
 }
 table th {
     background-color: #f2f2f2;
