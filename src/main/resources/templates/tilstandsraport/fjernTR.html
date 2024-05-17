@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="../../static/css/raport.css">
 <head>
     <meta charset="UTF-8">
-    <title>Forretning</title>
+    <title>Fjern tilstandsraport</title>
 </head>
 <header>
 
@@ -25,24 +25,14 @@
     <a href="report.html" class="report">Report</a>
 </aside>
 <main class="fjernViaStelNR">
-    <h3>Skriv stelnummer på bil her der ønsket fjernet</h3>
+    <h3>Skriv stelnummer på bil her der ønskes fjernet</h3>
     <form id="removeCarForm">
         <label for="vin">Stelnummer:</label>
         <input type="text" id="vin" name="vin" required>
-        <button type="button" onclick="confirmVin()">Bekræft</button>
+        <button type="button" >Bekræft</button>
     </form>
 </main>
 
-<script>
-    function confirmVin() {
-        const vin = document.getElementById('vin').value;
-        if (vin) {
-            // Her kan du tilføje logik til at håndtere stelnummeret, fx sende det til serveren
-            alert('Stelnummer ' + vin + ' er blevet bekræftet.');
-        } else {
-            alert('Indtast venligst et stelnummer.');
-        }
-    }
-</script>
+
 </body>
 </html>

@@ -1,4 +1,4 @@
-.tilføjTR, .fjernTR, .redigerTR{
+.tilføjTR, .fjernTR, .redigerTR, .laesTR{
     width: 20vh;
     height: 5vh;
     position: absolute;
@@ -13,6 +13,10 @@
 }
 .fjernTR{
     top: 45vh;
+}
+
+.laesTR{
+    top: 60vh;
 }
 header{
     height: 10vh;

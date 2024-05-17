@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="../../static/css/raport.css">
 <head>
     <meta charset="UTF-8">
-    <title>Forretning</title>
+    <title>Rediger tilstandsraport</title>
 </head>
 <header>
 
@@ -18,6 +18,16 @@
     </script>
 </header>
 <body>
+
+<main class="fjernViaStelNR">
+    <h3>Skriv stelnummer på bil her der ønskes at redigeres</h3>
+    <form id="removeCarForm">
+        <label for="vin">Stelnummer:</label>
+        <input type="text" id="vin" name="vin" required>
+        <button type="button" >Bekræft</button>
+    </form>
+</main>
+
 <aside class="menu">
     <h2>Emner</h2>
     <a href="dataregistrering.html" class="data">Dataregistrering</a>
