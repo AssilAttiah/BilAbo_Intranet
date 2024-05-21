@@ -1,9 +1,8 @@
 .forretning, .rapport,.data{
     text-decoration: none;
     color: black;
-    left: 0;
+    left: .5vh;
     position: absolute;
-
 
 }
 .data{
@@ -11,14 +10,13 @@
     font-size: 5vh;
     padding-left: 3vh;
     padding-right: 1.8vh;
-    background-color: rgba(24,27,177,0.47);
 }
-.data:hover{
+.data:hover, .rapport:hover, .forretning:hover{
     transform: scale(1.01);
     background-color:rgba(24,27,177,0.47) ;
+    border-radius: 3vh;
 
 }
-
 .forretning{
     top: 24vh;
     font-size: 5vh;
@@ -29,22 +27,18 @@
     top: 33vh;
     font-size: 5vh;
     padding-left: 3vh;
-    padding-right: 20.5vh;
+    padding-right: 18vh;
 
 }
-.rapport:hover{
-    transform: scale(1.01);
-    background-color:rgba(24,27,177,0.47) ;
-}
+
 .menu{
+    margin-top: 15vh;
     background-color: lightgray;
-    width: 250px;
+    width: 15vw;
     padding: 20px;
     position: fixed;
     top: 15vh;
     left: 1vh;
-    height: 60%;
+    height: 45%;
     border: 2px solid;
-    margin: 0;
 }
-

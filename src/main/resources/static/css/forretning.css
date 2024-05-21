@@ -5,6 +5,11 @@ body{
     overflow: hidden;
 }
 
+.forretning{
+    background-color: #1892C3;
+    border-radius: 3vh;
+}
+
 .intjeningKvartal {
     margin-left: 20vw;
     margin-top: 7vh;
