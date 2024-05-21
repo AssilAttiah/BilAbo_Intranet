@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org/">.
-
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dataregistrering</title>
-    <link rel="stylesheet" th:href="@{/css/dataregistrering.css}" href="..\static\css\dataregistrering.css">
-    <link rel="stylesheet" th:href="@{/css/header.css}" href="..\static\css\header.css">
-    <link rel="stylesheet" th:href="@{/css/menu.css}" href="..\static\css\menu.css">
+    <link rel="stylesheet" th:href="@{/css/dataregistrering.css}" href="../static/css/dataregistrering.css">
+    <link rel="stylesheet" th:href="@{/css/header.css}" href="../static/css/header.css">
+    <link rel="stylesheet" th:href="@{/css/menu.css}" href="../static/css/menu.css">
 </head>
 <body>
 <header>
@@ -17,7 +16,7 @@
         </div>
         <button class="tilbage-knap" onclick="tilbage()">Tilbage</button>
         <script>
-            function tilbage(){  //DETTE ER TAGET FRA CHATGPT
+            function tilbage() {
                 history.back();
             }
         </script>
@@ -27,69 +26,77 @@
     </div>
 </header>
 
-    <aside class="menu">
-        <h2>Menu</h2>
-        <a href="dataregistrering.html" class="data">Dataregistrering</a>
-        <a href="forretning.html" class="forretning">Forretning</a>
-        <a href="rapport.html" class="rapport">Rapport</a>
-    </aside>
+<aside class="menu">
+    <h2>Menu</h2>
+    <a href="dataregistrering.html" class="data">Dataregistrering</a>
+    <a href="forretning.html" class="forretning">Forretning</a>
+    <a href="rapport.html" class="rapport">Rapport</a>
+</aside>
 
-    <form action="/gemdata" method="post">
-        <div class="kundeoplysninger">
-            <h2> Kunde oplysninger:</h2>
-            <div class="fornavn">
-                <h3>Fornavn:</h3><input type="text" placeholder="Indtast fornavn" required>
-            </div>
-            <div class="efternavn">
-                <h3>Efternavn:</h3><input type="text" placeholder="Indtast efternavn" required>
-            </div>
-            <div class="kørekortNummer">
-                <h3> Kørekort nummer:</h3><input type="text" placeholder="Indtast kørekort nummer" required>
-            </div>
+<form action="/gemdata" method="post">
+    <div class="kundeoplysninger">
+        <h2>Kunde oplysninger:</h2>
+        <div class="fornavn">
+            <h3>Fornavn:</h3><input type="text" name="fornavn" placeholder="Indtast fornavn" required>
         </div>
+        <div class="efternavn">
+            <h3>Efternavn:</h3><input type="text" name="efternavn" placeholder="Indtast efternavn" required>
+        </div>
+        <div class="kørekortNummer">
+            <h3>Kørekort nummer:</h3><input type="text" name="kørekortnummer" placeholder="Indtast kørekort nummer" required>
+        </div>
+    </div>
 
-        <div class="bilen">
-            <div class="bilensoplysninger">
-                <h2> Bilens oplysninger:</h2>
-            </div>
-            <div class="maerke">
-                <h3>  Maerke:</h3>
-                <select>
-                    <option value="Citröen">Citröen</option>
-                    <option value="Opel">Opel</option>
-                    <option value="DS">DS</option>
-                    <option value="Peugot">Peugot</option>
-                    <option value="FIAT">FIAT</option>
-                </select>
-            </div>
-            <div class="model">
-                <h3>  Model: </h3>
-                <input type="text" placeholder="Indtast bilmodel"required>
-            </div>
-            <div class="aargang">
-                <h3>  Aargang:</h3>
-                <input type="text" placeholder="Indtast årgang"required>
-            </div>
+    <div class="bilen">
+        <div class="bilensoplysninger">
+            <h2>Bilens oplysninger:</h2>
         </div>
-        <div class="aftale">
-            <div class="leasingaftale">
-                <h2> Leasingaftale:</h2>
-            </div>
-            <div class="tid">
-                <h3> Tid:</h3>
-                <select>
-                    <option>Limited (5 mdr)</option>
-                    <option>Unlimited (3 mdr - 36 mdr)</option>
-                </select>
-            </div>
-            <div class="unlimited-indskriv">
-                <h3>Unlimited Leasing</h3>
-                <input type="number" id="måned-valg" placeholder="Angiv leasing periode" min="3" max="36">
-            </div>
+        <div class="mærke">
+            <h3>Maerke:</h3>
+            <select name="mærke">
+                <option value="Citröen">Citröen</option>
+                <option value="Opel">Opel</option>
+                <option value="DS">DS</option>
+                <option value="Peugeot">Peugeot</option>
+                <option value="FIAT">FIAT</option>
+            </select>
         </div>
-        <div class="gem">
-            <button type="submit">Gem</button>
+        <div class="model">
+            <h3>Model:</h3>
+            <input type="text" name="model" placeholder="Indtast bilmodel" required>
         </div>
-    </form>
+        <div class="aargang">
+            <h3>Aargang:</h3>
+            <input type="text" name="aargang" placeholder="Indtast årgang" required>
+        </div>
+        <div class="stelnummer">
+            <h3>Stelnummer:</h3>
+            <input type="text" name="stelnummer" placeholder="Indtast stelnummer" required>
+        </div>
+        <div class="status">
+            <h3>Status:</h3>
+            <input type="text" name="status" placeholder="Indtast status" required>
+        </div>
+    </div>
+    <div class="aftale">
+        <div class="leasingaftale">
+            <h2>Leasingaftale:</h2>
+        </div>
+        <div class="tid">
+            <h3>Tid:</h3>
+            <select name="tid">
+                <option>Limited (5 mdr)</option>
+                <option>Unlimited (3 mdr - 36 mdr)</option>
+            </select>
+        </div>
+        <div class="unlimited-indskriv">
+            <h3>Unlimited Leasing</h3>
+            <input type="number" id="måned-valg" name="unlimitedLeasing" placeholder="Angiv leasing periode" min="3" max="36">
+        </div>
+    </div>
+    <div class="gem">
+        <button type="submit">Gem</button>
+    </div>
+</form>
 </body>
 </html>
