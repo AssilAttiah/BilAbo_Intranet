@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">.
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">.
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dataregistrering</title>
-    <link rel="stylesheet" href="..\static\css\dataregistrering.css">
-    <link rel="stylesheet" href="..\static\css\header.css">
-    <link rel="stylesheet" href="..\static\css\menu.css">
+    <link rel="stylesheet" th:href="@{/css/dataregistrering.css}" href="..\static\css\dataregistrering.css">
+    <link rel="stylesheet" th:href="@{/css/header.css}" href="..\static\css\header.css">
+    <link rel="stylesheet" th:href="@{/css/menu.css}" href="..\static\css\menu.css">
 </head>
 <body>
 <header>
@@ -21,7 +22,7 @@
             }
         </script>
         <a href="dataregistrering.html">
-            <img class="logo" src="/static/images/BilAboLogo.png" th:src="@{/static/images/BilAboLogo.png}" alt="Logo">
+            <img class="logo" src="/static/images/BilAboLogo.png" th:src="@{/images/BilAboLogo.png}" alt="Logo">
         </a>
     </div>
 </header>

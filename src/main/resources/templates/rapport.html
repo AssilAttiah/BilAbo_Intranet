@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
 
 <link rel="stylesheet" href="../static/css/rapport.css">
 <head>
@@ -7,15 +7,20 @@
     <title>Forretning</title>
 </head>
 <header>
-
-    <a class="bilabo">BILABO</a>
-    <button class="tilbage" onclick="redirectToLogin()">Tilbage</button>
-    <script>
-        function redirectToLogin() {
-            window.location.href = "login.html";
-        } // Den linje kode, window.location.href = "login.html";, anvendes i JavaScript til at ændre det aktuelle browservindues URL til en anden URL,
-        // i dette tilfælde "login.html".
-    </script>
+    <div class="header-container">
+        <div class="overskrift">
+            <h1>Tilstandsrapport</h1>
+        </div>
+        <button class="tilbage-knap" onclick="tilbage()">Tilbage</button>
+        <script>
+            function tilbage(){  //DETTE ER TAGET FRA CHATGPT
+                history.back();
+            }
+        </script>
+        <a href="dataregistrering.html">
+            <img class="logo" src="/static/images/BilAboLogo.png" th:src="@{/images/BilAboLogo.png}" alt="Logo">
+        </a>
+    </div>
 </header>
 <body>
 <aside class="menu">
