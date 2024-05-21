@@ -1,20 +1,32 @@
 package com.example.bilabo_intranet.controller;
 
+import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class myController {
 
     @GetMapping("/")
-    public String index() {
-        return "index";
+    public String home() {
+        return "redirect:/login";
     }
 
     @GetMapping("/login")
-    public String login(@RequestParam(value="loginType", defaultValue = "")String loginType) {
+    public String showLoginPage() {
+        return "login";
+    }
+
+    @PostMapping("/login")
+    public String login(@RequestParam(value="loginType", defaultValue = "") String loginType,
+                        @RequestParam("brugernavn") String username,
+                        @RequestParam("adgangskode") String adgangskode,
+                        HttpSession session) {
+        session.setAttribute("username", username);
+        session.setAttribute("adgangskode", adgangskode);
+
         if (loginType.equals("Medarbejder")) {
             return "dataregistrering";
         } else if (loginType.equals("FDM")) {
