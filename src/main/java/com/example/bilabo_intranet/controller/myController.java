@@ -28,11 +28,11 @@ public class myController {
         session.setAttribute("adgangskode", adgangskode);
 
         if (loginType.equals("Medarbejder")) {
-            return "dataregistrering";
+            return "forside";
         } else if (loginType.equals("FDM")) {
-            return "dataregistrering";
+            return "tilfojTR";
         } else if (loginType.equals("Admin")) {
-            return "forretning";
+            return "forside";
         } else {
             return "Forkert login";
         }
