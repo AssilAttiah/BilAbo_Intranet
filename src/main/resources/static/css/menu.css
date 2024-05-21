@@ -13,7 +13,7 @@
 }
 .data:hover, .rapport:hover, .forretning:hover{
     transform: scale(1.01);
-    background-color:rgba(24,27,177,0.47) ;
+    background-color: #71a6bb;
     border-radius: 3vh;
 
 }
