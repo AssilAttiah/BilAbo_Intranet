@@ -1,29 +1,41 @@
 package com.example.bilabo_intranet.controller;
 
-import com.example.bilabo_intranet.service.BilService;
-import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class myController {
 
-
-@Autowired
-    BilService bilService;
-
-
+    @GetMapping("/")
+    public String home() {
+        return "redirect:/login";
+    }
 
     @GetMapping("/login")
-    public String loginForm() {
+    public String showLoginPage() {
         return "login";
     }
 
+    @PostMapping("/login")
+    public String login(@RequestParam(value="loginType", defaultValue = "") String loginType,
+                        @RequestParam("brugernavn") String username,
+                        @RequestParam("adgangskode") String adgangskode,
+                        HttpSession session) {
+        session.setAttribute("username", username);
+        session.setAttribute("adgangskode", adgangskode);
 
+        if (loginType.equals("Medarbejder")) {
+            return "dataregistrering";
+        } else if (loginType.equals("FDM")) {
+            return "dataregistrering";
+        } else if (loginType.equals("Admin")) {
+            return "forretning";
+        } else {
+            return "Forkert login";
+        }
+    }
 }
-
-
 

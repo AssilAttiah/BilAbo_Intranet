@@ -1,101 +1,53 @@
-header{
-    height: 10vh;
-    background-color: white;
+body{
     margin: 0;
     padding: 0;
-    border-bottom: 1px solid;
-}
-.bilabo{
-    position: absolute;
-    left: 84vh;
-    top: 3vh;
-    font-size: 3vh;
-
-}
-.tilbage{
-    position: absolute;
-    left: 3vh;
-    top: 3vh;
-}
-
-
-.forretning, .report,.data{
-    text-decoration: none;
-    color: black;
-    left: 0;
-    position: absolute;
-
-
-}
-.data{
-    top: 15vh;
-    font-size: 5vh;
-    padding-left: 3vh;
-    padding-right: 1.8vh;
-}
-.data:hover{
-    transform: scale(1.01);
-background-color:rgba(24,27,177,0.47) ;
-
+    height: 100vh;
+    overflow-y: auto;
+    width: 98.1%;
 }
 
 .forretning{
-    top: 24vh;
-    font-size: 5vh;
+    background-color: #1892C3;
+    border-radius: 3vh;
+}
+
+.intjeningKvartal {
+    margin-top: 7vh;
+    font-size: 18px;
+    text-align: left;
+
+}
+.forretning{
     background-color: rgba(24,27,177,0.47);
-   padding-left: 3vh;
-    padding-right: 13.4vh;
-}
-.report{
-    top: 33vh;
-    font-size: 5vh;
-    padding-left: 3vh;
-    padding-right: 20.5vh;
-
-}
-.report:hover{
-    transform: scale(1.01);
-    background-color:rgba(24,27,177,0.47) ;
-}
-.menu{
-    background-color: lightgray;
-    width: 32.1vh; /* Juster bredden efter behov */
-    padding: 20px;
-    position: fixed;
-    top: 15vh;
-    left: 1vh;
-    height: 50vh;
-    border: 2px solid;
-    margin: 0;
 }
 
-body{
-    background-color: white;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+.overordnet {
+
+    display: block;
+    width: 30vw;
+margin:0 auto;
 }
 
-.pengebil {
-    width: 60vh;
-    position: absolute;
-    top: 11vh;
-    left: 67vh;
-    border: solid black;
+table {
+    display: table;
+    border-collapse: collapse;
+    width: 100%;
+    box-shadow: 8px 8px 10px black;
 }
 
-.pengebil th, .pengebil td {
+.intjeningÅr {
+
+    margin-top: 7vh;
+    font-size: 18px;
+    text-align: left;
+    padding-bottom: 10vh;
+}
+
+
+table th, table td {
+    padding: 2vh 2vw;
     border: 1px solid black;
 }
-
-.pengebil th {
-    background-color: whitesmoke;
-}
-.samlet {
-    position: absolute;
-    left: 130vh;
-    top: 10vh;
-    border: solid black 1px;
+table th {
+    background-color: #f2f2f2;
 }
