@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dataregistrering</title>
+    <link rel="stylesheet" href="..\static\css\dataregistrering.css">
+</head>
+<body>
+<div class="dataregistrering"> <h1> Dataregistrering</h1> </div>
+
+<aside class="menu">
+    <h2>Emner</h2>
+    <a href="dataregistrering.html" class="data">Dataregistrering</a>
+    <a href="forretning.html" class="forretning">Forretning</a>
+    <a href="rapport.html" class="rapport">Rapport</a>
+</aside>
+
+<form action="/gemdata" method="post">
+<div class="kundeoplysninger">
+    <h2> Kunde oplysninger:</h2>
+    <div class="fornavn">   <h3> Fornavn:  </h3> <input type="text" placeholder="Indtast fornavn"> </div>
+    <div class="efternavn"> <h3> Efternavn:</h3> <input type="text" placeholder="Indtast efternavn"> </div>
+    <div class="kørekortNummer">  <h3> Kørekort nummer:</h3> <input type="text" placeholder="Indtast kørekort nummer"> </div>
+</div>
+
+<div class="bilen">
+<div class="bilensoplysninger">
+    <h2> Bilens oplysninger:</h2> </div>
+    <div class="maerke"> <h3>  Maerke:</h3> <select>
+        <option value="volvo">Volvo</option>
+        <option value="ford">Ford</option>
+        <option value="DS">DS</option>
+    </select> </div>
+
+    <div class="model"> <h3>  Model: </h3> <input type="text" placeholder="Indtast bilmodel"> </div>
+    <div class="aargang"> <h3>  Aargang:</h3> <input type="text" placeholder="Indtast årgang"> </div>
+
+</div>
+
+    <div class="aftale">
+    <div class="leasingaftale"> <h2> Leasingaftale:</h2> </div>
+        <div class="tid"> <h3> Tid:</h3>
+            <input type="text" placeholder="Indtast leasingtid"> </div>
+
+</div>
+    <div class="gem"> <button type="submit">Gem</button> </div>
+</form>
+
+</body>
+</html>
