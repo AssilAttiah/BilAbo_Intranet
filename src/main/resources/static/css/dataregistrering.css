@@ -1,6 +1,7 @@
-.dataregistrering {
-    margin-top: 5vh;
-    text-align: center;
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
 .kundeoplysninger {
