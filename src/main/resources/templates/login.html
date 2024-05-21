@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" th:href="@{/css/login.css}" href="../static/css/login.css">
+    <link rel="stylesheet" href="../static/css/login.css">
     <title>Login</title>
 </head>
 <body>
-    <div class="container1">
-        <div class="login-container">
+<div class="container1">
+    <div class="login-container">
+        <form action="/login" method="post">
             <h3><label for="login-type" id="login-type-tekst">Vælg en logintype</label></h3>
-            <select id="login-type">
+            <select id="login-type" name="loginType">
                 <option value="Medarbejder">Medarbejder</option>
                 <option value="Admin">Admin</option>
                 <option value="FDM">FDM</option>
@@ -23,13 +24,9 @@
                 <h3><label for="adgangskode">Adgangskode</label></h3>
                 <input type="password" id="adgangskode" name="adgangskode" required>
             </div>
-            <button class="login-knap" onclick="redirectForside()">Login</button>
-            <script>
-            function redirectForside() {
-            window.location.href = "dataregistrering.html";
-            }
-            </script>
-        </div>
+            <button type="submit" class="login-knap">Login</button>
+        </form>
     </div>
+</div>
 </body>
 </html>
