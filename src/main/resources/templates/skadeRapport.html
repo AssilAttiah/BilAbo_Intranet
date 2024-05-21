@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/skadeRapport.css}" href="../static/css/skadeRapport.css">
+    <title>Skade Rapport</title>
+</head>
+<body>
+<div class="SkadeRapport">
+    <h1>Skade Rapport</h1>
+    <form id="skadeForm">
+        <label for="name">Navn:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="date">Dato:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="description">Beskrivelse:</label>
+        <textarea id="description" name="description" rows="4" required></textarea>
+
+        <button type="submit">Indsend Rapport</button>
+    </form>
+    <div class="message" id="message">Tak for din rapport!</div>
+</div>
+</body>
+</html>

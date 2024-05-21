@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    height: 97vh;
+    background-color: #f4f4f4;
+}
+
+.SkadeRapport {
+    background-color: white;
+    padding: 20vh;
+    border-radius: 8vh;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+h1 {
+    margin-bottom: 5vh;
+    font-size: 150%;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 1vh;
+    font-weight: bold;
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 0.6vw;
+    margin-bottom: 2vh;
+    border: 1px solid grey;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.message {
+    text-align: center;
+    font-size: 16px;
+    color: green;
+}
