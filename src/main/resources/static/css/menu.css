@@ -42,24 +42,3 @@
     height: 45%;
     border: 2px solid;
 }
-
-header{
-    height: 10vh;
-    background-color: white;
-    margin: 0;
-    padding: 0;
-    border-bottom: 1px solid;
-}
-.bilabo{
-    position: absolute;
-    left: 84vh;
-    top: 3vh;
-    font-size: 3vh;
-
-}
-.tilbage{
-    position: absolute;
-    left: 3vh;
-    top: 3vh;
-}
-
