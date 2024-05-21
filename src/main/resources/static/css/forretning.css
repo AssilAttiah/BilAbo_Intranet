@@ -15,17 +15,12 @@ body{
     margin-top: 7vh;
     font-size: 18px;
     text-align: left;
-
-}
-.forretning{
-    background-color: rgba(24,27,177,0.47);
 }
 
 .overordnet {
-
     display: block;
     width: 30vw;
-margin:0 auto;
+    margin:0 auto;
 }
 
 table {
@@ -36,7 +31,6 @@ table {
 }
 
 .intjeningÅr {
-
     margin-top: 7vh;
     font-size: 18px;
     text-align: left;

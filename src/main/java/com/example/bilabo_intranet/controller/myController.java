@@ -19,6 +19,11 @@ public class myController {
         return "login";
     }
 
+    @GetMapping("/rapport") // TEST TEST TEST TEST TEST
+    public String rapportPage() {
+        return "rapport";
+    }
+
     @PostMapping("/login")
     public String login(@RequestParam(value="loginType", defaultValue = "") String loginType,
                         @RequestParam("brugernavn") String username,
