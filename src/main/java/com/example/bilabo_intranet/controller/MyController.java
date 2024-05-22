@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
-public class myController {
+public class MyController {
 
     @GetMapping("/")
     public String home() {

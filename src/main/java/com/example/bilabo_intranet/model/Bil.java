@@ -1,7 +1,6 @@
 package com.example.bilabo_intranet.model;
 
 public class Bil {
-
     private String stelnummer;
     private String mærke;
     private String model;
