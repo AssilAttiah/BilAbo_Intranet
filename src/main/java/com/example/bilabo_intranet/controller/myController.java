@@ -27,6 +27,8 @@ public class myController {
         session.setAttribute("username", username);
         session.setAttribute("adgangskode", adgangskode);
 
+
+
         if (loginType.equals("Medarbejder")) {
             return "forside";
         } else if (loginType.equals("FDM")) {
