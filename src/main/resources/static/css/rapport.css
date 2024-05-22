@@ -25,4 +25,36 @@ body{
     height: 110%;
 }
 
+.column {
+    left: 7vh;
+}
+
+.container1 {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: absolute;
+    left: 50vh;
+}
+
+.container2 {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: absolute;
+    left: 110vh;
+
+}
+.container3 {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: absolute;
+    left: 155vh;
+
+}
+
 
