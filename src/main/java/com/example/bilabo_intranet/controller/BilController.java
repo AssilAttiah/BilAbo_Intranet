@@ -1,7 +1,9 @@
 package com.example.bilabo_intranet.controller;
 
 import com.example.bilabo_intranet.model.Bil;
+import com.example.bilabo_intranet.model.Kunde;
 import com.example.bilabo_intranet.service.BilService;
+import com.example.bilabo_intranet.service.KundeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,8 +17,11 @@ public class BilController {
     @Autowired
     private BilService bilService;
 
+    @Autowired
+    private KundeService kundeService;
+
     @GetMapping("/dataregistrering")
-    public String dataregistrering() {
+    public String dataregistreringPage() {
         return "dataregistrering";
     }
 
@@ -32,20 +37,26 @@ public class BilController {
                           @RequestParam("tid") String tid,
                           @RequestParam("unlimitedLeasing") int unlimitedLeasing,
                           Model modelAttr) {
+
         Bil bil = new Bil();
         bil.setStelnummer(stelnummer);
         bil.setMærke(mærke);
         bil.setModel(model);
         bil.setStatus(status);
-        bil.setFornavn(fornavn);
-        bil.setEfternavn(efternavn);
-        bil.setKørekortnummer(kørekortnummer);
         bil.setÅrgang(aargang);
         bil.setTid(tid);
         bil.setUnlimitedLeasing(unlimitedLeasing);
 
         bilService.saveBil(bil);
-        modelAttr.addAttribute("message", "Bil data er gemt!");
+
+        Kunde kunde = new Kunde();
+        kunde.setFornavn(fornavn);
+        kunde.setEfternavn(efternavn);
+        kunde.setKørekortnummer(kørekortnummer);
+
+        kundeService.saveKunde(kunde);
+
+        modelAttr.addAttribute("message", "Bil og kunde data er gemt!");
 
         return "dataregistrering";
     }

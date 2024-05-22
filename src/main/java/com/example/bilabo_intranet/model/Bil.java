@@ -93,4 +93,8 @@ public class Bil {
     public void setMærke(String mærke) {
         this.mærke = mærke;
     }
+
+    public int getLeasingID() {
+        return 0;
+    }
 }
