@@ -1,36 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" th:href="@{/css/login.css}" href="../static/css/login.css">
-    <link rel="stylesheet" href="..\static\css\menu.css">
+    <link rel="stylesheet" th:href="@{/css/menu.css}" href="../static/css/menu.css">
     <title>Login</title>
 </head>
 <body>
-    <div class="container1">
-        <div class="login-container">
-            <h3><label for="login-type" id="login-type-tekst">Vælg en logintype</label></h3>
-            <select id="login-type">
+<div class="container1">
+    <div class="login-container">
+        <h3><label for="login-type" id="login-type-tekst">Vælg en logintype</label></h3>
+        <form action="/login" method="post">
+            <select id="login-type" name="loginType">
                 <option value="Medarbejder">Medarbejder</option>
                 <option value="Admin">Admin</option>
                 <option value="FDM">FDM</option>
             </select>
             <div class="brugernavn-indtast">
                 <h3><label for="brugernavn">Brugernavn</label></h3>
-                <input type="text" id="brugernavn" name="brugernavn" required>
+                <input type="text" id="brugernavn" name="brugernavn">
             </div>
             <div class="adgangskode-indtast">
                 <h3><label for="adgangskode">Adgangskode</label></h3>
-                <input type="password" id="adgangskode" name="adgangskode" required>
+                <input type="password" id="adgangskode" name="adgangskode">
             </div>
-            <button class="login-knap" onclick="redirectForside()">Login</button>
-            <script>
-            function redirectForside() {
-            window.location.href = "dataregistrering.html";
-            }
-            </script>
-        </div>
+            <button type="submit" class="login-knap">Login</button>
+        </form>
     </div>
+</div>
 </body>
 </html>

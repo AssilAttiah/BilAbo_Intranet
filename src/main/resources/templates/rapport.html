@@ -1,19 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+
+<link rel="stylesheet" href="../static/css/rapport.css">
 <head>
     <meta charset="UTF-8">
-    <title>Rapport</title>
-    <link rel="stylesheet" href="..\static\css\rapport.css">
-    <link rel="stylesheet" href="..\static\css\menu.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tilstandsrapport</title>
+    <link rel="stylesheet" th:href="@{/css/rapport.css}" href="..\static\css\rapport.css">
+    <link rel="stylesheet" th:href="@{/css/header.css}" href="..\static\css\header.css">
+    <link rel="stylesheet" th:href="@{/css/menu.css}" href="..\static\css\menu.css">
 </head>
+<header>
+    <div class="header-container">
+        <div class="overskrift">
+            <h1>Tilstandsrapport</h1>
+        </div>
+        <button class="tilbage-knap" onclick="tilbage()">Tilbage</button>
+        <script>
+            function tilbage(){  //DETTE ER TAGET FRA CHATGPT
+                history.back();
+            }
+        </script>
+        <a th:href="@{/templates/forside.html}" href="dataregistrering.html">
+            <img class="logo" src="/static/images/BilAboLogo.png" th:src="@{/images/BilAboLogo.png}" alt="Logo">
+        </a>
+    </div>
+</header>
 <body>
 <aside class="menu">
-    <h2>Emner</h2>
+    <h2>Menu</h2>
     <a href="dataregistrering.html" class="data">Dataregistrering</a>
     <a href="forretning.html" class="forretning">Forretning</a>
     <a href="rapport.html" class="rapport">Rapport</a>
 </aside>
-
+<div class="rapport-CRUD-conntainer">
+    <div class="rapport-CRUD">
+        <button class="tilføjTR" onclick="redirectToTilfojTR()">Tilføj tilstandsraport</button>
+            <script>
+                function redirectToTilfojTR() {
+                    window.location.href = "tilstandsraport/tilfojTR.html";
+                }
+            </script>
+        <button class="laesTR" onclick="redirectTolaesTR()">Læs Tilstandsraport</button>
+            <script>
+                function redirectTolaesTR() {
+                    window.location.href = "tilstandsraport/leasTR.html";
+                }
+            </script>
+        <button class="redigerTR" onclick="redirectToRediger()">Rediger tilstandsraport</button>
+            <script>
+                function redirectToRediger() {
+                    window.location.href = "tilstandsraport/redigerTR.html";
+                }
+            </script>
+        <button class="fjernTR" onclick="redirectToFjernTR()">Fjern tilstandsraport</button>
+            <script>
+                function redirectToFjernTR() {
+                    window.location.href = "tilstandsraport/fjernTR.html";
+                }
+            </script>
+    </div>
+</div>
 
 </body>
 </html>

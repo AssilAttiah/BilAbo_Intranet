@@ -1,6 +1,13 @@
-.dataregistrering {
-    margin-top: 5vh;
-    text-align: center;
+body{
+    margin-top: -3vh;
+    margin-left: -1vw;
+    padding: 0;
+    overflow: hidden;
+}
+
+.data{
+    background-color: #1892C3;
+    border-radius: 3vh;
 }
 
 .kundeoplysninger {
