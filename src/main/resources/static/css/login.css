@@ -13,6 +13,7 @@ body{
     background-color: #f2f2f2;
     display: grid;
     justify-items: center;
+    align-items: start;
     width: 20%;
     height: 65vh;
     box-shadow: 1.5vh 1.5vh 3vh black;
@@ -27,18 +28,17 @@ h3{
     display: grid;
     justify-items: center;
     margin-top: 5%;
-    grid-row-gap: 5%;
-    height: 12%;
+    grid-column-gap: 5%;
     width: 100%;
 }
 
 .login-knap{
-    margin-top: 17%;
-    height: 60%;
+    margin-left: 15%;
+    margin-top: 25%;
+    height: 20%;
     background-color: white;
     border-width: .1vh;
 }
-
 
 .login-knap:hover{
     background-color: #007bff;
@@ -49,5 +49,9 @@ h3{
 .login-knap, #login-type{
     cursor: pointer;
     width: 65%;
+}
+
+#login-type{
+    margin-left: 15%;
 }
 
