@@ -17,8 +17,8 @@ public class KundeRepository {
     private JdbcTemplate jdbcTemplate;
 
     public int save(Kunde kunde) {
-        String sql = "INSERT INTO BilAbo.Kunde (fornavn, efternavn, alder, kørekortnummer) VALUES (?, ?, ?, ?)";
-        return jdbcTemplate.update(sql, kunde.getFornavn(), kunde.getEfternavn(), kunde.getAlder(), kunde.getKørekortnummer());
+        String sql = "INSERT INTO BilAbo.Kunde (fornavn, efternavn, kørekortnummer) VALUES (?, ?, ?)";
+        return jdbcTemplate.update(sql, kunde.getFornavn(), kunde.getEfternavn(), kunde.getKørekortnummer());
     }
 
     public Kunde findById(int kundeID) {
@@ -39,7 +39,6 @@ public class KundeRepository {
             kunde.setKundeID(rs.getInt("kundeID"));
             kunde.setFornavn(rs.getString("fornavn"));
             kunde.setEfternavn(rs.getString("efternavn"));
-            kunde.setAlder(rs.getInt("alder"));
             kunde.setKørekortnummer(rs.getString("kørekortnummer"));
             return kunde;
         }

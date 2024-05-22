@@ -4,7 +4,6 @@ public class Kunde {
     private int kundeID;
     private String fornavn;
     private String efternavn;
-    private int alder;
     private String kørekortnummer;
 
     public int getKundeID() {
@@ -29,14 +28,6 @@ public class Kunde {
 
     public void setEfternavn(String efternavn) {
         this.efternavn = efternavn;
-    }
-
-    public int getAlder() {
-        return alder;
-    }
-
-    public void setAlder(int alder) {
-        this.alder = alder;
     }
 
     public String getKørekortnummer() {
