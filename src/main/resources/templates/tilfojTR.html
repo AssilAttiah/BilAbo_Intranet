@@ -1,35 +1,78 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
-<link rel="stylesheet" th:href="@{/css/tilstandsrapport.css}" href="../static/css/tilstandsrapport.css">
-<link rel="stylesheet" th:href="@{/css/header.css}" href="../static/css/header.css">
+
+<link rel="stylesheet" th:href="@{/css/tilfojTR.css}" href="../../static/css/tilfojTR.css">
+<link rel="stylesheet" th:href="@{/css/header.css}" href="../../static/header.css">
 <head>
     <meta charset="UTF-8">
-    <title>tilføj raport</title>
+    <title>Tilføj Tilstandsrapport</title>
 </head>
-<body>
 <header>
     <div class="header-container">
         <div class="overskrift">
-            <h1>Tilføj tilstandsrapport</h1>
+            <h1>Tilføj Tilstandsrapport</h1>
         </div>
         <button class="tilbage-knap" onclick="tilbage()">Tilbage</button>
         <script>
             function tilbage() {
-                history.back()
+                history.back();
             }
         </script>
-        <a href="dataregistrering.html">
+        <a th:href="@{/templates/forside.html}" href="forside.html">
             <img class="logo" src="/static/images/BilAboLogo.png" th:src="@{/images/BilAboLogo.png}" alt="Logo">
         </a>
     </div>
 </header>
-<main class="fjernViaStelNR">
-    <h3>Skriv stelnummer på bil, du ønsker lave raport på</h3>
-    <form id="removeCarForm">
-        <label for="vin">Stelnummer:</label>
-        <input type="text" id="vin" name="vin" required>
-        <button type="button">Bekræft</button>
-    </form>
-</main>
+<body>
+    <div class="container1">
+        <div class="column1">
+            <h2 class="overskrift-1">Stelnummer, pris og rapportnummer</h2>
+            <div class="input-box-1-1">
+                <label for="vin">Stelnummer:</label>
+                <input type="text" id="vin" name="vin" required>
+            </div>
+            <div class="input-box-1-2">
+                <label for="pris">Pris:</label>
+                <input type="text" id="pris" name="pris" required>
+            </div>
+        </div>
+    </div>
+
+    <div class="container2">
+        <div class="column2">
+            <h2 class="overskrift-2">Fejl og mangler</h2>
+            <div class="input-box-2-1">
+                <label for="skade-2-1">Skade 1:</label>
+                <input type="text" id="skade-2-1" name="skade1" required>
+            </div>
+            <div class="input-box-2-2">
+                <label for="skade-2-2">Skade 2:</label>
+                <input type="text" id="skade-2-2" name="skade1" required>
+            </div>
+            <div class="input-box-2-3">
+                <label for="skade-2-3">Skade 3:</label>
+                <input type="text" id="skade-2-3" name="skade2" required>
+            </div>
+            <button type="button" >Bekræft</button>
+        </div>
+    </div>
+    <div class="container3">
+        <div class="column3">
+            <h2 class="overskrift-3">Pris per skade</h2>
+            <div class="input-box-3-1">
+                <label for="skade-3-1">Skade 1:</label>
+                <input type="text" id="skade-3-1" name="skade1" required>
+            </div>
+            <div class="input-box-3-2">
+                <label for="skade-3-2">Skade 2:</label>
+                <input type="text" id="skade-3-2" name="skade1" required>
+            </div>
+            <div class="input-box-3-3">
+                <label for="skade-3-3">Skade 3:</label>
+                <input type="text" id="skade-3-3" name="skade2" required>
+            </div>
+            <button type="button" >Bekræft</button>
+        </div>
+    </div>
 </body>
 </html>
