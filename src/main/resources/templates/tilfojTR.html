@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<link rel="stylesheet" th:href="@{/css/rapport.css}" href="../static/css/rapport.css">
+<link rel="stylesheet" th:href="@{/css/header.css}" href="../static/css/header.css">
+<head>
+    <meta charset="UTF-8">
+    <title>tilføj raport</title>
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <div class="overskrift">
+            <h1>Tilføj tilstandsrapport</h1>
+        </div>
+        <button class="tilbage-knap" onclick="tilbage()">Tilbage</button>
+        <script>
+            function tilbage() {
+                history.back()
+            }
+        </script>
+        <a href="dataregistrering.html">
+            <img class="logo" src="/static/images/BilAboLogo.png" th:src="@{/images/BilAboLogo.png}" alt="Logo">
+        </a>
+    </div>
+</header>
+<main class="fjernViaStelNR">
+    <h3>Skriv stelnummer på bil, du ønsker lave raport på</h3>
+    <form id="removeCarForm">
+        <label for="vin">Stelnummer:</label>
+        <input type="text" id="vin" name="vin" required>
+        <button type="button">Bekræft</button>
+    </form>
+</main>
+</body>
+</html>
