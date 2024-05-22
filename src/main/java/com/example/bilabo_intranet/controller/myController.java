@@ -19,11 +19,6 @@ public class myController {
         return "login";
     }
 
-    @GetMapping("/rapport") // TEST TEST TEST TEST TEST
-    public String rapportPage() {
-        return "rapport";
-    }
-
     @PostMapping("/login")
     public String login(@RequestParam(value="loginType", defaultValue = "") String loginType,
                         @RequestParam("brugernavn") String username,
@@ -41,6 +36,41 @@ public class myController {
         } else {
             return "Forkert login";
         }
+    }
+
+    @GetMapping("/rapport")
+    public String rapport() {
+        return "rapport";
+    }
+
+    @GetMapping("/forside")
+    public String forside() {
+        return "forside";
+    }
+
+    @GetMapping("/forretning")
+    public String forretning() {
+        return "forretning";
+    }
+
+    @GetMapping("fjernTR")
+    public String fjernTR() {
+        return "fjernTR";
+    }
+
+    @GetMapping("leasTR")
+    public String leasTR() {
+        return "leasTR";
+    }
+
+    @GetMapping("redigerTR")
+    public String redigerTR() {
+        return "redigerTR";
+    }
+
+    @GetMapping("tilfojTR")
+    public String tilfojTR() {
+        return "tilfojTR";
     }
 }
 

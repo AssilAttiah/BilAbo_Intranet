@@ -16,7 +16,7 @@ public class BilController {
     private BilService bilService;
 
     @GetMapping("/dataregistrering")
-    public String dataregistreringPage() {
+    public String dataregistrering() {
         return "dataregistrering";
     }
 
