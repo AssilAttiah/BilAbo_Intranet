@@ -5,27 +5,47 @@ body{
     overflow-x: hidden;
 }
 
-.overskrift-1{
-    margin-left: 20%;
-}
-
 .input-box-1-1,.input-box-1-2 {
     display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-row-gap: 2vh;
+    grid-row-gap: 1vh;
     margin-top: 3vh;
-
+    width: 100%;
 }
 
-
-.container2,.container3 {
-    background-color: #007bff; //SLET-NÅR-DONE
+.column1{
     display: grid;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 30%;
+    justify-content: left;
+    margin-left: 25%;
+    margin-top: 2vh;
+    width: 20%;
 }
 
+.column2{
+    display: grid;
+    justify-content: left;
+    margin-left: 25%;
+    width: 30%;
+    grid-row-gap: 3vh;
+}
+
+#skade-2-1-pris,#skade-2-2-pris,#skade-2-3-pris,#skade-2-4-pris,#skade-2-5-pris,#skade-2-6-pris{
+    width: 25%;
+}
+
+.overskrift-skader{
+    transform: translate(25%, 170%);
+}
+
+.overskrift-pris{
+  margin-left: 39%;
+}
+
+.rapportnummer{
+    margin-left: 65%;
+    margin-top: -18%;
+}
+
+.samlet-pris{
+    margin-left: 65%;
+    margin-top: -22%;
+}
