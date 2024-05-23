@@ -39,15 +39,15 @@ body{
   margin-left: 39%;
 }
 
-rapportnummer{
-    margin-left: 64.5%;
-    margin-top: -16.5%;
+.rapportnummer{
+top: 16vh;
+    left: 115vh;
     position: absolute;
 }
 
 .samlet-pris{
-    margin-left: 65%;
-    margin-top: -22%;
+    top: 30vh;
+    left: 115vh;
     position: absolute;
 }
 
