@@ -1,13 +1,20 @@
 package com.example.bilabo_intranet.controller;
 
+import com.example.bilabo_intranet.service.BilService;
+import com.example.bilabo_intranet.service.LeasingService;
 import jakarta.servlet.http.HttpSession;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class MyController {
+
+    @Autowired
+    private LeasingService leasingService;
 
     @GetMapping("/")
     public String home() {
@@ -48,7 +55,13 @@ public class MyController {
     }
 
     @GetMapping("/forretning")
-    public String forretning() {
+    public String forretning(Model model) {
+        int leasedCarCount = leasingService.countLeasedCars();
+        double totalPrice = leasingService.calculateTotalPrice();
+
+        model.addAttribute("leasedCarCount", leasedCarCount);
+        model.addAttribute("totalPrice", totalPrice);
+
         return "forretning";
     }
 

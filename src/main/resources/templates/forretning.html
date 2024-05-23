@@ -31,87 +31,12 @@
     <a href="forretning" class="forretning">Forretning</a>
     <a href="rapport" class="rapport">Rapport</a>
 </aside>
-<div class="overordnet">
-    <div class="intjeningKvartal">
-        <h1>Indtjening pr. kvartal</h1>
-        <table>
-            <thead>
-            <tr>
-                <th>Dato</th>
-                <th>Antal biler</th>
-                <th>Antal udlejet biler</th>
-                <th>Samlagt penge pr. kvartal</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>1-3-2023</td>
-                <td>500</td>
-                <td>5000 DKK</td>
-                <td>500</td>
-            </tr>
-            <tr>
-                <td>1-6-2023</td>
-                <td>2</td>
-                <td>6000 DKK</td>
-                <td>500</td>
-            </tr>
-            <tr>
-                <td>1-9-2023</td>
-                <td>3</td>
-                <td>7000 DKK</td>
-                <td>500</td>
-            </tr>
-            <tr>
-                <td>1-12-2023</td>
-                <td>500</td>
-                <td>500</td>
-                <td>500</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="intjeningÅr">
-        <h1>Indtjening pr. år</h1>
-        <table>
-            <thead>
-            <tr>
-                <th>Antal biler</th>
-                <th>Antal udlejet biler</th>
-                <th>Samlagt penge pr. kvartal</th>
-                <th>Samlagt penge pr. år</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>1-1-2020</td>
-                <td>50</td>
-                <td>5000 DKK</td>
-                <td>500</td>
-            </tr>
-            <tr>
-                <td>1-1-2021</td>
-                <td>2</td>
-                <td>6000 DKK</td>
-                <td>500</td>
-            </tr>
-            <tr>
-                <td>1-1-2022</td>
-                <td>3</td>
-                <td>7000 DKK</td>
-                <td>500</td>
-            </tr>
-            <tr>
-                <td>1-1-2023</td>
-                <td>500</td>
-                <td>500</td>
-                <td>500</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
 <main>
+    <div class="leasingInfo">
+        <h2>Leasingoplysninger</h2>
+        <p>Antal udlejede biler: <span th:text="${leasedCarCount}"></span></p>
+        <p>Samlet pris for udlejede biler: <span th:text="${totalPrice}"></span> DKK</p>
+    </div>
 </main>
 </body>
 </html>
