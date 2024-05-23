@@ -28,12 +28,12 @@ public class TilstandsrapportController {
 
     @PostMapping("/tilstandsrapport/beregn-samlet-pris")
     public String beregnSamletPris(
-            @RequestParam("skadePris1") int skadePris1,
-            @RequestParam("skadePris2") int skadePris2,
-            @RequestParam("skadePris3") int skadePris3,
-            @RequestParam("skadePris4") int skadePris4,
-            @RequestParam("skadePris5") int skadePris5,
-            @RequestParam("skadePris6") int skadePris6,
+            @RequestParam("skadePris1") double skadePris1,
+            @RequestParam("skadePris2") double skadePris2,
+            @RequestParam("skadePris3") double skadePris3,
+            @RequestParam("skadePris4") double skadePris4,
+            @RequestParam("skadePris5") double skadePris5,
+            @RequestParam("skadePris6") double skadePris6,
             Model model) {
 
 
