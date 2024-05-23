@@ -2,8 +2,10 @@ package com.example.bilabo_intranet.controller;
 
 import com.example.bilabo_intranet.model.Bil;
 import com.example.bilabo_intranet.model.Kunde;
+import com.example.bilabo_intranet.model.Leasingaftale;
 import com.example.bilabo_intranet.service.BilService;
 import com.example.bilabo_intranet.service.KundeService;
+import com.example.bilabo_intranet.service.LeasingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,6 +22,9 @@ public class BilController {
     @Autowired
     private KundeService kundeService;
 
+    @Autowired
+    private LeasingService leasingService;
+
     @GetMapping("/dataregistrering")
     public String dataregistreringPage() {
         return "dataregistrering";
@@ -35,8 +40,13 @@ public class BilController {
                           @RequestParam("kørekortnummer") String kørekortnummer,
                           @RequestParam("aargang") String aargang,
                           @RequestParam("tid") String tid,
-                          @RequestParam("unlimitedLeasing") int unlimitedLeasing,
+                          @RequestParam(value="unlimitedLeasing", required=false) Integer unlimitedLeasing,
                           Model modelAttr) {
+
+        if ("Unlimited (3 mdr - 36 mdr)".equals(tid) && (unlimitedLeasing == null || unlimitedLeasing < 3 || unlimitedLeasing > 36)) {
+            modelAttr.addAttribute("message", "For 'Unlimited' leasing, skal leasingperioden være mellem 3 og 36 måneder.");
+            return "dataregistrering";
+        }
 
         Bil bil = new Bil();
         bil.setStelnummer(stelnummer);
@@ -44,8 +54,6 @@ public class BilController {
         bil.setModel(model);
         bil.setStatus(status);
         bil.setÅrgang(aargang);
-        bil.setTid(tid);
-        bil.setUnlimitedLeasing(unlimitedLeasing);
 
         bilService.saveBil(bil);
 
@@ -55,6 +63,12 @@ public class BilController {
         kunde.setKørekortnummer(kørekortnummer);
 
         kundeService.saveKunde(kunde);
+
+        Leasingaftale leasingaftale = new Leasingaftale();
+        leasingaftale.setLeasingType(tid);
+        leasingaftale.setLeasingPeriode(Integer.parseInt(String.valueOf("Limited (5 mdr)".equals(tid) ? 5 : unlimitedLeasing)));
+
+        leasingService.saveLeasingaftale(leasingaftale);
 
         modelAttr.addAttribute("message", "Bil og kunde data er gemt!");
 
