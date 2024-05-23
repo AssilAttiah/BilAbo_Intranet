@@ -23,4 +23,10 @@ public class TilstandsrapportService {
     public List<TilstandsrapportModel> findAllTr() {
         return tilstandsrapportRepository.findAllTr();
     }
+
+    public double beregnSamletPris(double skadePris1, double skadePris2, double skadePris3, double skadePris4, double skadePris5, double skadePris6) {
+        return skadePris1 + skadePris2 + skadePris3 + skadePris4 + skadePris5 + skadePris6;
+    }
+
 }
+
