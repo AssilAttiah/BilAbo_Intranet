@@ -7,7 +7,6 @@ body{
 
 .input-box-1-1,.input-box-1-2 {
     display: grid;
-    grid-row-gap: 1vh;
     margin-top: 3vh;
     width: 100%;
 }
@@ -41,11 +40,18 @@ body{
 }
 
 .rapportnummer{
-    margin-left: 65%;
-    margin-top: -18%;
+    margin-left: 64.5%;
+    margin-top: -16.5%;
 }
 
 .samlet-pris{
     margin-left: 65%;
     margin-top: -22%;
+}
+
+.gem-knap{
+    margin-left: 52%;
+    margin-top: 27%;
+    height: 5%;
+    width: 5%;
 }
