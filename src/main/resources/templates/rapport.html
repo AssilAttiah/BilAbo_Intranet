@@ -59,7 +59,29 @@
                     window.location.href = "fjernTR";
                 }
             </script>
+
     </div>
+
+</div>
+<div class="rapport-table-container">
+    <table class="rapport-table">
+        <thead>
+        <tr>
+            <th>Rapportnummer</th>
+            <th>Pris</th>
+            <th>Stelnummer</th>
+            <th>Skader og Mangler</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="rapport : ${rapporter}">
+            <td th:text="${rapport.rapportNummer}"></td>
+            <td th:text="${rapport.pris}"></td>
+            <td th:text="${rapport.stelnummer}"></td>
+            <td th:text="${rapport.skadeOgMangler}"></td>
+        </tr>
+        </tbody>
+    </table>
 </div>
 
 

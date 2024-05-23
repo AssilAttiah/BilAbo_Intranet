@@ -1,9 +1,11 @@
 package com.example.bilabo_intranet.model;
 
+import java.math.BigDecimal;
+
 public class TilstandsrapportModel {
    private String rapportNummer;
 
-   private String pris;
+   private BigDecimal pris;
    private String stelnummer;
    private String skadeOgMangler;
 
@@ -16,11 +18,11 @@ public class TilstandsrapportModel {
         this.rapportNummer = rapportNummer;
     }
 
-    public String getPris() {
+    public BigDecimal getPris() {
         return pris;
     }
 
-    public void setPris(String pris) {
+    public void setPris(BigDecimal pris) {
         this.pris = pris;
     }
 

@@ -13,9 +13,9 @@ body{
 
 .rapport-CRUD-conntainer{
     position: relative;
-    left: 70vw;
+    left: 75vw;
     height: 100%;
-    bottom: 20%;
+    bottom: 9vh;
 }
 
 .rapport-CRUD{
@@ -23,6 +23,28 @@ body{
     gap: 5vh;
     width: 20%;
     height: 110%;
+}
+
+.rapport-table{
+    position: absolute;
+    left: 56vh;
+    margin: 0;
+    border: 1px solid black;
+    width: 75vh;
+    border-collapse: collapse;
+}
+.rapport-table th, .rapport-table td {
+    border: 1px solid black; /* Streger til hver celle */
+    padding: 8px; /* Padding der laver cellerne lidt støre*/
+    text-align: left; /* sætter teksten til venstre */
+
+}
+.rapport-table-container{
+    display: table;
+    position: absolute;
+    top: 30vh;
+
+
 }
 
 

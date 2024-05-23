@@ -38,10 +38,7 @@ public class MyController {
         }
     }
 
-    @GetMapping("/rapport")
-    public String rapport() {
-        return "rapport";
-    }
+
 
     @GetMapping("/forside")
     public String forside() {
