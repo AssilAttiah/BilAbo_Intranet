@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.overskrift-1{
+    margin-left: 20%;
+}
+
+.input-box-1-1,.input-box-1-2 {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-row-gap: 2vh;
+    margin-top: 3vh;
+
+}
+
+
+.container2,.container3 {
+    background-color: #007bff; //SLET-NÅR-DONE
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 30%;
+}
+
