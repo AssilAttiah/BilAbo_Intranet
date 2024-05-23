@@ -26,53 +26,62 @@
 <body>
     <div class="container1">
         <div class="column1">
-            <h2 class="overskrift-1">Stelnummer, pris og rapportnummer</h2>
+            <h2 class="overskrift-1">Stelnummer</h2>
             <div class="input-box-1-1">
                 <label for="vin">Stelnummer:</label>
-                <input type="text" id="vin" name="vin" required>
-            </div>
-            <div class="input-box-1-2">
-                <label for="pris">Pris:</label>
-                <input type="text" id="pris" name="pris" required>
+                <input type="text" id="vin" name="vin" placeholder="Ex. 2859943" required>
             </div>
         </div>
     </div>
-
+    <div class="overskrifter">
+        <h2 class="overskrift-skader">Skade</h2>
+        <h2 class="overskrift-pris">Pris</h2>
+    </div>
     <div class="container2">
         <div class="column2">
-            <h2 class="overskrift-2">Fejl og mangler</h2>
             <div class="input-box-2-1">
-                <label for="skade-2-1">Skade 1:</label>
-                <input type="text" id="skade-2-1" name="skade1" required>
+                <label for="skade-2-1"></label>
+                <input type="text" id="skade-2-1" name="skade1" placeholder="Ex. 'Defekt motor'">
+                <label for="skade-2-1-pris"></label>
+                <input type="number" id="skade-2-1-pris" name="skade-1-pris" placeholder="Ex. 516 kr.">
             </div>
             <div class="input-box-2-2">
-                <label for="skade-2-2">Skade 2:</label>
-                <input type="text" id="skade-2-2" name="skade1" required>
+                <label for="skade-2-2"></label>
+                <input type="text" id="skade-2-2" name="skade2">
+                <label for="skade-2-2-pris"></label>
+                <input type="number" id="skade-2-2-pris" name="skade-2-pris">
             </div>
             <div class="input-box-2-3">
-                <label for="skade-2-3">Skade 3:</label>
-                <input type="text" id="skade-2-3" name="skade2" required>
+                <label for="skade-2-3"></label>
+                <input type="text" id="skade-2-3" name="skade3">
+                <label for="skade-2-3-pris"></label>
+                <input type="number" id="skade-2-3-pris" name="skade-3-pris">
             </div>
-            <button type="button" >Bekræft</button>
+            <div class="input-box-2-4">
+                <label for="skade-2-4"></label>
+                <input type="text" id="skade-2-4" name="skade4">
+                <label for="skade-2-4-pris"></label>
+                <input type="number" id="skade-2-4-pris" name="skade-4-pris">
+            </div>
+            <div class="input-box-2-5">
+                <label for="skade-2-5"></label>
+                <input type="text" id="skade-2-5" name="skade5">
+                <label for="skade-2-5-pris"></label>
+                <input type="number" id="skade-2-5-pris" name="skade-5-pris">
+            </div>
+            <div class="input-box-2-6">
+                <label for="skade-2-6"></label>
+                <input type="text" id="skade-2-6" name="skade6">
+                <label for="skade-2-6-pris"></label>
+                <input type="number" id="skade-2-6-pris" name="skade-6-pris">
+            </div>
         </div>
     </div>
-    <div class="container3">
-        <div class="column3">
-            <h2 class="overskrift-3">Pris per skade</h2>
-            <div class="input-box-3-1">
-                <label for="skade-3-1">Skade 1:</label>
-                <input type="text" id="skade-3-1" name="skade1" required>
-            </div>
-            <div class="input-box-3-2">
-                <label for="skade-3-2">Skade 2:</label>
-                <input type="text" id="skade-3-2" name="skade1" required>
-            </div>
-            <div class="input-box-3-3">
-                <label for="skade-3-3">Skade 3:</label>
-                <input type="text" id="skade-3-3" name="skade2" required>
-            </div>
-            <button type="button" >Bekræft</button>
-        </div>
+    <div class="samlet-pris">
+        <h2>Samlet Pris</h2>
+    </div>
+    <div class="rapportnummer">
+        <h2>Rapportnummer:</h2>
     </div>
 </body>
 </html>
