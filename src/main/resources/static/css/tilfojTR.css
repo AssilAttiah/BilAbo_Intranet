@@ -2,6 +2,7 @@ body{
     margin: 0;
     padding: 0;
     height: 100vh;
+    width: auto;
     overflow-x: hidden;
 }
 
@@ -14,46 +15,52 @@ body{
 .column1{
     display: grid;
     justify-content: left;
-    margin-left: 25%;
-    margin-top: 2vh;
-    width: 20%;
+    margin-left: 20vw;
+    margin-top: 5vh;
+    width: 20vw;
 }
 
 .column2{
     display: grid;
     justify-content: left;
-    margin-left: 25%;
-    width: 30%;
+    margin-top: 20vh;
+    margin-left: 20vw;
+    width: 30vw;
     grid-row-gap: 3vh;
 }
 
 #skade-2-1-pris,#skade-2-2-pris,#skade-2-3-pris,#skade-2-4-pris,#skade-2-5-pris,#skade-2-6-pris{
-    width: 25%;
+    width: 10vw;
 }
 
 .overskrift-skader{
-    transform: translate(25%, 170%);
+    position: absolute;
+    left: 20vw;
+    top: 45vh;
 }
 
 .overskrift-pris{
-  margin-left: 39%;
+  position: absolute;
+    left: 34vw;
+    top: 45vh;
 }
 
 .rapportnummer{
-top: 16vh;
-    left: 115vh;
+    top: 19vh;
+    left: 65vw;
     position: absolute;
 }
 
 .samlet-pris{
-    top: 30vh;
-    left: 115vh;
+    top: 45vh;
+    left: 65vw;
     position: absolute;
 }
 
 .gem-knap{
-    margin-left: 52%;
-    margin-top: 27%;
-    height: 5%;
-    width: 5%;
+    position: absolute;
+    top: 89vh;
+    left: 47vw;
+    height: 5vh;
+    width: 5vw;
 }

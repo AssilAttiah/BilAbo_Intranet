@@ -1,6 +1,6 @@
 header{
     height: 10vh;
-    width: 100%;
+    width: 100vw;
     padding: 2vh;
     box-shadow: 1vh 1vh 3vh black;
 }
@@ -20,12 +20,12 @@ header{
     width: 6vw;
     height: 6vh;
    position: absolute;
-    left: 12%;
-    top: 4%;
+    left: 12vw;
+    top: 4vh;
 }
 
 .logo{
     position: absolute;
-    left: 75%;
-    top: 2%;
+    left: 75vw;
+    top: 2vh;
 }
