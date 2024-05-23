@@ -64,3 +64,8 @@ body{
     height: 5vh;
     width: 5vw;
 }
+
+.samlet-pris{
+    display: grid;
+    justify-content: right;
+}
