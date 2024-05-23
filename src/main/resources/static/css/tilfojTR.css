@@ -39,14 +39,16 @@ body{
   margin-left: 39%;
 }
 
-.rapportnummer{
+rapportnummer{
     margin-left: 64.5%;
     margin-top: -16.5%;
+    position: absolute;
 }
 
 .samlet-pris{
     margin-left: 65%;
     margin-top: -22%;
+    position: absolute;
 }
 
 .gem-knap{
