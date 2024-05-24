@@ -17,7 +17,7 @@ public class TilstandsrapportRepository {
     @Autowired
     private  JdbcTemplate jdbcTemplate;
     public int saveTr(TilstandsrapportModel tilstandsrapport) {
-        String sql = "INSERT INTO BilAbo.tilstandsrapport (rapportnummer, pris, stelnummer, skadeMangler) VALUES (?, ?, ?, ?)";
+        String sql = "INSERT INTO BilAbo.tilstandsrapport (rapportnummer, pris, stelnummer, Skade_mangler) VALUES (?, ?, ?, ?)";
         return jdbcTemplate.update(sql, tilstandsrapport.getRapportNummer(), tilstandsrapport.getPris(), tilstandsrapport.getStelnummer(), tilstandsrapport.getSkadeOgMangler());
     }
     public TilstandsrapportModel findByTrNr(String rapportnummer) {

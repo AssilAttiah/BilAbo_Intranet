@@ -13,7 +13,7 @@ public class TilstandsrapportService {
     @Autowired
     private TilstandsrapportRepository tilstandsrapportRepository;
 
-    public int saveBil(TilstandsrapportModel tilstandsrapportModel) {
+    public int saveTr(TilstandsrapportModel tilstandsrapportModel) {
         return tilstandsrapportRepository.saveTr(tilstandsrapportModel);
     }
     public TilstandsrapportModel findTrById(String rapportnummer) {
