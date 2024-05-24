@@ -30,20 +30,23 @@ public class MyController {
     public String login(@RequestParam(value="loginType", defaultValue = "") String loginType,
                         @RequestParam("brugernavn") String username,
                         @RequestParam("adgangskode") String adgangskode,
-                        HttpSession session) {
-        session.setAttribute("username", username);
-        session.setAttribute("adgangskode", adgangskode);
-
-
-
-        if (loginType.equals("Medarbejder")) {
+                        HttpSession session, Model model) {
+        // Check om brugernavn og adgangskode er korrekte baseret på loginType
+        if ("Admin".equals(loginType) && "admin".equals(username) && "admin".equals(adgangskode)) {
+            session.setAttribute("username", username);
+            session.setAttribute("adgangskode", adgangskode);
             return "forside";
-        } else if (loginType.equals("FDM")) {
+        } else if ("FDM".equals(loginType) && "fdm".equals(username) && "fdm".equals(adgangskode)) {
+            session.setAttribute("username", username);
+            session.setAttribute("adgangskode", adgangskode);
             return "tilfojTR";
-        } else if (loginType.equals("Admin")) {
+        } else if ("Medarbejder".equals(loginType) && "medarbejder".equals(username) && "medarbejder".equals(adgangskode)) {
+            session.setAttribute("username", username);
+            session.setAttribute("adgangskode", adgangskode);
             return "forside";
         } else {
-            return "Forkert login";
+            model.addAttribute("errorMessage", "Forkert username eller password");
+            return "forkertLogin";
         }
     }
 
