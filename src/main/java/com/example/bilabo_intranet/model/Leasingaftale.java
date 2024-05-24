@@ -4,6 +4,8 @@ public class Leasingaftale {
     private int leasingID;
     private String leasingType;
     private int leasingPeriode;
+    private String stelnummer;
+    private int kundeID;
 
     public int getLeasingID() {
         return leasingID;
@@ -27,5 +29,21 @@ public class Leasingaftale {
 
     public void setLeasingPeriode(int leasingPeriode) {
         this.leasingPeriode = leasingPeriode;
+    }
+
+    public String getStelnummer() {
+        return stelnummer;
+    }
+
+    public void setStelnummer(String stelnummer) {
+        this.stelnummer = stelnummer;
+    }
+
+    public int getKundeID() {
+        return kundeID;
+    }
+
+    public void setKundeID(int kundeID) {
+        this.kundeID = kundeID;
     }
 }

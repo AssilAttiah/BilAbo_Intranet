@@ -62,11 +62,15 @@ public class BilController {
         kunde.setEfternavn(efternavn);
         kunde.setKørekortnummer(kørekortnummer);
 
+        int kundeID = kundeService.saveKunde(kunde);
+
         kundeService.saveKunde(kunde);
 
         Leasingaftale leasingaftale = new Leasingaftale();
         leasingaftale.setLeasingType(tid);
         leasingaftale.setLeasingPeriode(Integer.parseInt(String.valueOf("Limited (5 mdr)".equals(tid) ? 5 : unlimitedLeasing)));
+        leasingaftale.setStelnummer(stelnummer);
+        leasingaftale.setKundeID(kundeID);
 
         leasingService.saveLeasingaftale(leasingaftale);
 
