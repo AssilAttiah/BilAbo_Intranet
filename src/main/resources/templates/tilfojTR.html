@@ -24,21 +24,21 @@
     </div>
 </header>
 <body>
-    <div class="container1">
-        <div class="column1">
-            <h2 class="overskrift-1">Stelnummer</h2>
-            <div class="input-box-1-1">
-                <label for="vin"></label>
-                <input type="text" id="vin" name="vin" placeholder="Ex. 2859943" required>
-            </div>
-        </div>
-    </div>
+
     <div class="overskrifter">
         <h2 class="overskrift-skader">Skade</h2>
         <h2 class="overskrift-pris">Pris</h2>
     </div>
-    <form action="/tilstandsrapport/beregn-samlet-pris" method="post">
-
+    <form action="/tilstandsrapport/gem" method="post">
+        <div class="container1">
+            <div class="column1">
+                <h2 class="overskrift-1">Stelnummer</h2>
+                <div class="input-box-1-1">
+                    <label for="stelnummer"></label>
+                    <input type="text" id="stelnummer" name="stelnummer" placeholder="Ex. 2859943" required>
+                </div>
+            </div>
+        </div>
     <div class="container2">
         <div class="column2">
             <div class="input-box-2-1">
@@ -79,7 +79,7 @@
             </div>
             <div class="skadeOgMangler">
                 <label for="skade-2-6"></label>
-                <textarea id="skadeOgMangler" name="skadeOgMangler" placeholder="Beskriv skader og mangler her" rows="6" cols="50"></textarea>
+                <textarea id="skadeOgMangler" name="skadeOgMangler" placeholder="Denne skadebeskrivelse bliver gemt" rows="6" cols="50"></textarea>
             </div>
         </div>
     </div>

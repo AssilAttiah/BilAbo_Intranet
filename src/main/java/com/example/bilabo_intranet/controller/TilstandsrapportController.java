@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @Controller
@@ -26,20 +27,30 @@ public class TilstandsrapportController {
     }
 
 
-    @PostMapping("/tilstandsrapport/beregn-samlet-pris")
+    @PostMapping("/tilstandsrapport/gem")
     public String beregnSamletPris(
+            @RequestParam("stelnummer") String stelnummer,
             @RequestParam("skadePris1") double skadePris1,
             @RequestParam("skadePris2") double skadePris2,
             @RequestParam("skadePris3") double skadePris3,
             @RequestParam("skadePris4") double skadePris4,
             @RequestParam("skadePris5") double skadePris5,
             @RequestParam("skadePris6") double skadePris6,
+            @RequestParam("skadeOgMangler") String skadeOgMangler,
             Model model) {
 
 
         double samletPris = tilstandsrapportService.beregnSamletPris(skadePris1, skadePris2, skadePris3, skadePris4, skadePris5, skadePris6);
         model.addAttribute("samletPris", samletPris);
 
+        TilstandsrapportModel nyRapport = new TilstandsrapportModel();
+        nyRapport.setStelnummer(stelnummer);
+        nyRapport.setPris(BigDecimal.valueOf(samletPris));
+        nyRapport.setSkadeOgMangler(skadeOgMangler);
+
+        tilstandsrapportService.saveTr(nyRapport);
+
+        model.addAttribute("samletPris",samletPris);
         return "tilfojTR"; // Returner til den samme side for at vise den samlede pris
     }
 }
