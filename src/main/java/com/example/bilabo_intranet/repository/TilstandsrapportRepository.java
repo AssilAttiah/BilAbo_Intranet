@@ -16,10 +16,16 @@ public class TilstandsrapportRepository {
 
     @Autowired
     private  JdbcTemplate jdbcTemplate;
+
+
+    // Tr er forkortelse for tilstandsrapport
+    // Gemmer tilstandsrapport
     public int saveTr(TilstandsrapportModel tilstandsrapport) {
         String sql = "INSERT INTO BilAbo.tilstandsrapport (rapportnummer, pris, stelnummer, Skade_mangler) VALUES (?, ?, ?, ?)";
         return jdbcTemplate.update(sql, tilstandsrapport.getRapportNummer(), tilstandsrapport.getPris(), tilstandsrapport.getStelnummer(), tilstandsrapport.getSkadeOgMangler());
     }
+
+    // Hvis man gerne vil finde en tilstandsrapport, kan man bruge denne kode.
     public TilstandsrapportModel findByTrNr(String rapportnummer) {
         String sql = "SELECT * FROM BilAbo.tilstandsrapport WHERE rapportnummer = ?";
         return jdbcTemplate.queryForObject(sql, new Object[]{rapportnummer}, new TrRowMapper());

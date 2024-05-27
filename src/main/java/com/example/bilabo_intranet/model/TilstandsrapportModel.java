@@ -9,6 +9,17 @@ public class TilstandsrapportModel {
    private String stelnummer;
    private String skadeOgMangler;
 
+    public TilstandsrapportModel() {
+    }
+
+    public TilstandsrapportModel(String rapportNummer, BigDecimal pris, String stelnummer, String skadeOgMangler) {
+        this.rapportNummer = rapportNummer;
+        this.pris = pris;
+        this.stelnummer = stelnummer;
+        this.skadeOgMangler = skadeOgMangler;
+    }
+
+
 
     public String getRapportNummer() {
         return rapportNummer;

@@ -20,6 +20,7 @@ public class TilstandsrapportService {
         return tilstandsrapportRepository.findByTrNr(rapportnummer);
     }
 
+    // Finder alle rapporten der gemt
     public List<TilstandsrapportModel> findAllTr() {
         return tilstandsrapportRepository.findAllTr();
     }

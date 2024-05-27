@@ -19,6 +19,8 @@ public class TilstandsrapportController {
     @Autowired
     private TilstandsrapportService tilstandsrapportService;
 
+
+// viser alle tilstandsrapporter
     @GetMapping("/rapport")
     public String viewRapportPage(Model model) {
         List<TilstandsrapportModel> rapporter = tilstandsrapportService.findAllTr();
@@ -26,7 +28,7 @@ public class TilstandsrapportController {
         return "rapport";
     }
 
-
+// Beregner samlet værdi og derefter gemmer den med stelnummer og skade og mangler
     @PostMapping("/tilstandsrapport/gem")
     public String beregnSamletPris(
             @RequestParam("stelnummer") String stelnummer,
@@ -40,17 +42,16 @@ public class TilstandsrapportController {
             Model model) {
 
 
+        // Beregner samlet pris
         double samletPris = tilstandsrapportService.beregnSamletPris(skadePris1, skadePris2, skadePris3, skadePris4, skadePris5, skadePris6);
         model.addAttribute("samletPris", samletPris);
 
-        TilstandsrapportModel nyRapport = new TilstandsrapportModel();
-        nyRapport.setStelnummer(stelnummer);
-        nyRapport.setPris(BigDecimal.valueOf(samletPris));
-        nyRapport.setSkadeOgMangler(skadeOgMangler);
-
+        // Gemmer den samlede pris, stelnummer og skade og mangler
+        TilstandsrapportModel nyRapport = new TilstandsrapportModel(null, BigDecimal.valueOf(samletPris), stelnummer, skadeOgMangler);
         tilstandsrapportService.saveTr(nyRapport);
 
+
         model.addAttribute("samletPris",samletPris);
-        return "tilfojTR"; // Returner til den samme side for at vise den samlede pris
+        return "tilfojTR";
     }
 }
