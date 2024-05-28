@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <link rel="stylesheet" th:href="@{/css/header.css}" href="..\static\css\header.css">
+    <link rel="stylesheet" th:href="@{/css/forkertLogin.css}" href="..\static\css\forkertLogin.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forkert login</title>
+</head>
+<header>
+    <div class="header-container">
+        <div class="overskrift">
+            <h1>Velkommen til BilAbonnoment.dk!</h1>
+        </div>
+        <button class="tilbage-knap" onclick="tilbage()">Tilbage</button>
+        <script>
+            function tilbage(){  //DETTE ER TAGET FRA CHATGPT
+                history.back();
+            }
+        </script>
+            <img class="logo" src="/static/images/BilAboLogo.png" th:src="@{/images/BilAboLogo.png}" alt="Logo">
+    </div>
+</header>
+<body>
+<div class="forkert-login">
+<h1>Forkert login</h1>
+<p>Brugernavn eller adgangskode er forkert. Venligst prøv igen.</p>
+</div>
+</body>
+</html>
