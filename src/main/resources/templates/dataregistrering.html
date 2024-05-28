@@ -14,8 +14,10 @@
         <div class="overskrift">
             <h1>Dataregistrering</h1>
         </div>
+        <!--Bruger onclick så man kan gå tilbage til forrige side. bruger JavaScript -->
         <button class="tilbage-knap" onclick="tilbage()">Tilbage</button>
         <script>
+            // kort Javascript der bare sender dig tilbage til forrige side
             function tilbage() {
                 history.back();
             }
@@ -65,7 +67,7 @@
             <h3>Model:</h3>
             <input type="text" name="model" placeholder="Indtast bilmodel" required>
         </div>
-        <label for="status"><h3>Status:</h3></label> <!-- Ny linje for status -->
+        <label for="status"><h3>Status:</h3></label>
         <select id="status" name="status">
             <option>Aktiv</option>
             <option>Ikke Aktiv</option>

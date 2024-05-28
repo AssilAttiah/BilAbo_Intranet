@@ -13,11 +13,13 @@ public class LeasingRepository {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
+    // Gemmer Leasingaftalen, altså perioden og typen om det er en unlimited eller limited
     public void save(Leasingaftale leasingaftale) {
         String sql = "INSERT INTO BilAbo.Leasingaftale (leasingType, leasingPeriode) VALUES (?, ?)";
         jdbcTemplate.update(sql, leasingaftale.getLeasingType(), leasingaftale.getLeasingPeriode());
     }
 
+    // Oversættelse fra SQL til JAVA
     public List<Leasingaftale> getAllLeasingaftaler() {
         String sql = "SELECT * FROM BilAbo.Leasingaftale";
         return jdbcTemplate.query(sql, (rs, rowNum) -> {

@@ -13,15 +13,18 @@ public class LeasingService {
     @Autowired
     private LeasingRepository leasingRepository;
 
+    // Gemmer leasingaftale ved hjælp af save(leasingaftale) fra leasingRepository
     public void saveLeasingaftale(Leasingaftale leasingaftale) {
         leasingRepository.save(leasingaftale);
     }
 
+    // Tæller antal af leasingaftaler
     public int countLeasedCars() {
         List<Leasingaftale> leasingaftaler = leasingRepository.getAllLeasingaftaler();
         return leasingaftaler.size();
     }
 
+    // beregner den totale pris
     public double calculateTotalPrice() {
         List<Leasingaftale> leasingaftaler = leasingRepository.getAllLeasingaftaler();
         double totalPrice = 0;

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 
-<link rel="stylesheet" th:href="@{/css/tilfojTR.css}" href="../../static/css/tilfojTR.css">
-<link rel="stylesheet" th:href="@{/css/header.css}" href="../../static/header.css">
+<link rel="stylesheet" th:href="@{/css/tilfojTR.css}" href="../static/css/tilfojTR.css">
+<link rel="stylesheet" th:href="@{/css/header.css}" href="../static/header.css">
 <head>
     <meta charset="UTF-8">
     <title>Tilføj Tilstandsrapport</title>
@@ -12,6 +12,8 @@
         <div class="overskrift">
             <h1>Tilføj Tilstandsrapport</h1>
         </div>
+        <!--Bruger event attributten onclick så man kan gå tilbage til forrige side. Bruger JavaScript til at definere onclick -->
+
         <button class="tilbage-knap" onclick="tilbage()">Tilbage</button>
         <script>
             function tilbage() {
@@ -29,6 +31,8 @@
         <h2 class="overskrift-skader">Skade</h2>
         <h2 class="overskrift-pris">Pris</h2>
     </div>
+
+<!--Her fra kommer oplysinger man skal skrive ind for at tilføje en tilstandsrapport -->
     <form action="/tilstandsrapport/gem" method="post">
         <div class="container1">
             <div class="column1">
@@ -85,8 +89,10 @@
     </div>
         <button class="gem-knap">Gem</button>
         </form>
+    <!-- Slutter her med at skrive oplysninger-->
     <div class="samlet-pris">
         <h2>Samlet Pris:</h2>
+        <!-- Til at hente oplysninger om samlet pris -->
         <h2><span id="samlet-pris-penge" th:text="${samletPris}">0</span> kr.</h2>
     </div>
     <div class="rapportnummer">

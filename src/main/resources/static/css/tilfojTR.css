@@ -12,6 +12,7 @@ body{
     width: 100%;
 }
 
+/* Til input feltet med stelnummer */
 .column1{
     display: grid;
     justify-content: left;
@@ -19,7 +20,7 @@ body{
     margin-top: 5vh;
     width: 20vw;
 }
-
+/* til skade og priser input felter */
 .column2{
     display: grid;
     justify-content: left;

@@ -26,6 +26,8 @@ public class MyController {
         return "login";
     }
 
+
+    // Login skal bruge brugernavn og password
     @PostMapping("/login")
     public String login(@RequestParam(value="loginType", defaultValue = "") String loginType,
                         @RequestParam("brugernavn") String username,
@@ -57,6 +59,7 @@ public class MyController {
         return "forside";
     }
 
+    // Samlet antal udlejede biler og samlet pris for antal måneder
     @GetMapping("/forretning")
     public String forretning(Model model) {
         int leasedCarCount = leasingService.countLeasedCars();

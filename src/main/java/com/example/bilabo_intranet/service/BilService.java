@@ -13,14 +13,18 @@ public class BilService {
     @Autowired
     private BilRepository bilRepository;
 
+    // Gemmer bilens oplysninger og bruger metoden fra BilRepository
     public int saveBil(Bil bil) {
         return bilRepository.save(bil);
     }
 
+    // Er ikke brugt. Skal finde specifik bil, og bruger metoden fra BilRepository findById()
     public Bil findBilById(String stelnummer) {
         return bilRepository.findById(stelnummer);
     }
 
+
+    // skal finde alle biler fra databasen ved hjælp af metoden findAll(), fra bilRepository
     public List<Bil> findAllBiler() {
         return bilRepository.findAll();
     }

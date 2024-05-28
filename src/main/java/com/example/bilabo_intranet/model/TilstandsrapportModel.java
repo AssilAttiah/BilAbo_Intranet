@@ -12,6 +12,7 @@ public class TilstandsrapportModel {
     public TilstandsrapportModel() {
     }
 
+    // consructor til tilstandsrapportController
     public TilstandsrapportModel(String rapportNummer, BigDecimal pris, String stelnummer, String skadeOgMangler) {
         this.rapportNummer = rapportNummer;
         this.pris = pris;

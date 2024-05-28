@@ -11,6 +11,7 @@ body{
     border-radius: 3vh;
 }
 
+/*Boksen til at skrive kundeoplysninger*/
 .kundeoplysninger {
     display: flex;
     position: absolute;
@@ -20,7 +21,7 @@ body{
     left: 25vw;
 
 }
-
+/* Css til bilens oplysninger kasse */
 .bilen {
     display: flex;
     position: absolute;
@@ -30,6 +31,7 @@ body{
     left: 50vw;
 }
 
+/* Css til leasingaftale kasse  */
 .aftale {
     display: flex;
     position: absolute;
@@ -38,6 +40,7 @@ body{
     margin-top: 7.5vh;
     left: 75vw;
 }
+
 
 .gem {
     position: absolute;

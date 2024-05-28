@@ -25,11 +25,13 @@ public class BilController {
     @Autowired
     private LeasingService leasingService;
 
+
     @GetMapping("/dataregistrering")
     public String dataregistreringPage() {
         return "dataregistrering";
     }
 
+    // metode til at gemme data fra bil model, leasingaftale og kunde model (Registrering af bil)
     @PostMapping("/gemdata")
     public String gemData(@RequestParam("stelnummer") String stelnummer,
                           @RequestParam("mærke") String mærke,
@@ -48,6 +50,8 @@ public class BilController {
             return "dataregistrering";
         }
 
+
+        // Gem fra bil model
         Bil bil = new Bil();
         bil.setStelnummer(stelnummer);
         bil.setMærke(mærke);
@@ -57,15 +61,20 @@ public class BilController {
 
         bilService.saveBil(bil);
 
+        // Gemmer kunden
         Kunde kunde = new Kunde();
         kunde.setFornavn(fornavn);
         kunde.setEfternavn(efternavn);
         kunde.setKørekortnummer(kørekortnummer);
 
+
+
         int kundeID = kundeService.saveKunde(kunde);
+
 
         kundeService.saveKunde(kunde);
 
+        // Gemmer leasingaftale
         Leasingaftale leasingaftale = new Leasingaftale();
         leasingaftale.setLeasingType(tid);
         leasingaftale.setLeasingPeriode(Integer.parseInt(String.valueOf("Limited (5 mdr)".equals(tid) ? 5 : unlimitedLeasing)));
@@ -74,6 +83,7 @@ public class BilController {
 
         leasingService.saveLeasingaftale(leasingaftale);
 
+        // Bliver ikke brugt endnu
         modelAttr.addAttribute("message", "Bil og kunde data er gemt!");
 
         return "dataregistrering";
