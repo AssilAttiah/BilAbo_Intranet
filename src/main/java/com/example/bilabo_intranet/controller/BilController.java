@@ -72,6 +72,6 @@ public class BilController {
 
         modelAttr.addAttribute("message", "Bil og kunde data er gemt!");
 
-        return "dataregistrering";
+        return "dataregistrering"; //skal testes
     }
 }
